@@ -223,9 +223,9 @@ void piscarLED(int pino) {
   Serial.print("Personagem Selecionado:");
   for (int i = 0; i < 5; i++) {
     digitalWrite(pino, HIGH);
-    delay(100);
+    delay(200);
     digitalWrite(pino, LOW);
-    delay(100);
+    delay(200);
   }
 }
 
