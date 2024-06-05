@@ -34,7 +34,6 @@ void setup() {
   Serial.println("Seja bem-vindo jogador! Clique nos botoes para selecionar seu personagem e iniciar sua batalha!!");
   Serial.println();
   Serial.println();
-  Serial.println();
 
   delay(300);
 
@@ -147,15 +146,19 @@ void loop() {
         if (cont_b1 == 1) {
           piscarLED(ledHerois[0]);
           Serial.println("BARDO!!");
+          Serial.println();
         } else if (cont_b1 == 2) {
           piscarLED(ledHerois[1]);
           Serial.println("GUERREIRO!!");
+          Serial.println();
         } else if (cont_b1 == 3) {
           piscarLED(ledHerois[2]);
           Serial.println("BRUXO!!");
+          Serial.println();
         } else if (cont_b1 == 4) {
           piscarLED(ledHerois[3]);
           Serial.println("FEITICEIRO!!");
+          Serial.println();
         }
       }
       // Seleção Vilões
@@ -164,18 +167,22 @@ void loop() {
         if (cont_b2 == 1) {
           piscarLED(ledViloes[0]);
           Serial.println("DRAGÃO!!");
+          Serial.println();
         } else if (cont_b2 == 2) {
           piscarLED(ledViloes[1]);
           Serial.println("GENERAL!!");
+          Serial.println();
         } else if (cont_b2 == 3) {
           piscarLED(ledViloes[2]);
           Serial.println("MORTE!!");
+          Serial.println();
         } else if (cont_b2 == 4) {
           piscarLED(ledViloes[3]);
           Serial.println("BRUXA!!");
+          Serial.println();
         }
 
-        Serial.println("Digite 1 para sair da selecao dos persongens ou 2 para continuar: ");
+        Serial.println("Digite 1 para sair da seleção dos persongens ou 2 para continuar: ");
         bool digitado = false;
         int exit = 0;
         while (!digitado) {
