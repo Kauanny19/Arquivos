@@ -15,7 +15,6 @@ int cont_b2 = 0;
 int cont_b3 = 0;
 
 bool continuar = true;
-int serialCount = 0;
 
 void setup() {
   Serial.begin(9600);
