@@ -216,7 +216,7 @@ void loop() {
     delay(300);
     dado();
   }
-}
+} 
 
 // Função para piscar o led do personagem escolhido
 void piscarLED(int pino) {
