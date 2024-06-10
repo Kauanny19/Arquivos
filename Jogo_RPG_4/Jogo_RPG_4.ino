@@ -31,7 +31,7 @@ void setup() {
     digitalWrite(ledViloes[i], LOW);
   }
 
-  Serial.println("Seja bem-vindo jogador! Clique nos botoes para selecionar seu personagem e iniciar sua batalha!!");
+  Serial.println("Seja bem-vindo jogador! Clique nos botões para selecionar seu personagem e iniciar sua batalha!!");
   Serial.println("ATENÇÃO!! Para encerrar o jogo digite 3");
   Serial.println();
   Serial.println();
@@ -56,7 +56,7 @@ void loop() {
         digitalWrite(ledHerois[i], LOW);  // Desliga os Leds quando não estiver selecionado
       }
 
-      digitalWrite(ledHerois[cont_b1 - 1], HIGH);
+      digitalWrite(ledHerois[cont_b1 - 1], HIGH); //Liga o LED de acordo com o contador
 
       if (cont_b1 == 1) {
         Serial.println("BARDO:");
@@ -188,8 +188,8 @@ void loop() {
         int exit = 0;
         while (!digitado) {
           if (Serial.available()) {
-            exit = Serial.readStringUntil('\n').toInt();
-            if (exit == 1 || exit == 2) {
+            exit = Serial.readStringUntil('\n').toInt();//Retorna a entrada do serial até a onde você definir e converte para inteiro
+            if (exit == 1 || exit == 2) { //Análisa se digitou 1 ou 2
               digitado = true;
             }
           }
@@ -220,7 +220,7 @@ void loop() {
   
   //Encerra o jogo
   if (Serial.available()){
-    int sair = Serial.parseInt();
+    int sair = Serial.parseInt();//Função que retorna entrada do serial em número inteiro
     if (sair == 3) {
       for (byte i = 0; i < 4; i++) {
         digitalWrite(ledHerois[i], LOW);
